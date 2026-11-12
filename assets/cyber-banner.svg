@@ -1,113 +1,124 @@
 
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="400" viewBox="0 0 1200 400">
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1200" height="400"
+     viewBox="0 0 1200 400">
 
-<defs>
-  <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#050505"/>
-    <stop offset=".5" stop-color="#151515"/>
-    <stop offset="1" stop-color="#030303"/>
-  </linearGradient>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080808"/>
+      <stop offset="55%" stop-color="#151515"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
 
-  <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#ffffff"/>
-    <stop offset=".5" stop-color="#999999"/>
-    <stop offset="1" stop-color="#eeeeee"/>
-  </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none"
+            stroke="#ffffff" stroke-opacity=".055" stroke-width=".6"/>
+    </pattern>
 
-  <pattern id="grid" width="25" height="25"
-           patternUnits="userSpaceOnUse">
-    <path d="M25 0H0V25" fill="none"
-          stroke="#ffffff" stroke-opacity=".055"/>
-  </pattern>
+    <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".7" fill="#ffffff" opacity=".18"/>
+    </pattern>
 
-  <pattern id="dots" width="7" height="7"
-           patternUnits="userSpaceOnUse">
-    <circle cx="2" cy="2" r="1" fill="#fff" opacity=".3"/>
-  </pattern>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".05"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity=".65"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity=".05"/>
+    </linearGradient>
 
-  <clipPath id="rightClip">
-    <rect x="830" y="35" width="320" height="320"/>
-  </clipPath>
-</defs>
+    <clipPath id="logoClip">
+      <circle cx="970" cy="200" r="88"/>
+    </clipPath>
+  </defs>
 
-<!-- BACKGROUND -->
-<rect width="1200" height="400" fill="url(#background)"/>
-<rect width="1200" height="400" fill="url(#grid)"/>
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg)"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+  <rect width="1200" height="400" fill="url(#dots)" opacity=".25"/>
 
-<!-- LEFT EDITORIAL COLUMN -->
-<text x="65" y="55" fill="#999"
-      font-family="monospace" font-size="12"
-      letter-spacing="4">
-  INDEPENDENT DEVELOPER / 2026
-</text>
+  <!-- Decorative framing -->
+  <path d="M48 42H1152 M48 358H1152"
+        stroke="#ffffff" stroke-opacity=".22" stroke-width="1"/>
 
-<path d="M65 75H1135" stroke="#777" stroke-opacity=".5"/>
+  <text x="50" y="30" fill="#888888"
+        font-family="monospace" font-size="10"
+        letter-spacing="3">PERSONAL PORTFOLIO / 2026</text>
 
-<!-- OVERSIZED TYPOGRAPHY -->
-<text x="55" y="205"
-      font-family="Arial,sans-serif"
-      font-size="104" font-weight="900"
-      letter-spacing="-7" fill="url(#silver)">
-  ASHFAQ
-</text>
+  <text x="1150" y="30" text-anchor="end"
+        fill="#888888" font-family="monospace"
+        font-size="10" letter-spacing="2">01 — 03</text>
 
-<text x="55" y="302"
-      font-family="Arial,sans-serif"
-      font-size="104" font-weight="900"
-      letter-spacing="-7" fill="#ffffff">
-  HYDER
-</text>
+  <!-- Main typography -->
+  <text x="54" y="155"
+        fill="#ffffff"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="76" font-weight="800"
+        letter-spacing="-4">ASHFAQ</text>
 
-<!-- UNDERLINE -->
-<rect x="65" y="325" width="95" height="3" fill="#fff"/>
+  <text x="54" y="232"
+        fill="#ffffff"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="76" font-weight="800"
+        letter-spacing="-4">HYDER.</text>
 
-<text x="65" y="355"
-      font-family="monospace" font-size="14"
-      letter-spacing="3" fill="#aaa">
-  CODE × DESIGN × INTELLIGENCE
-</text>
+  <rect x="56" y="260" width="390" height="1.5" fill="url(#line)"/>
 
-<!-- Your personal logo -->
-<circle cx="970" cy="200" r="112"
-        fill="#ffffff" fill-opacity="0.04"
-        stroke="#ffffff" stroke-opacity="0.45"
-        stroke-width="1.5"/>
+  <text x="56" y="292"
+        fill="#c9c9c9"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="15" letter-spacing="3">
+    CODE × DESIGN × INTELLIGENCE
+  </text>
 
-<defs>
-  <clipPath id="logoClip">
-    <circle cx="970" cy="200" r="88"/>
-  </clipPath>
-</defs>
+  <text x="56" y="326"
+        fill="#777777"
+        font-family="monospace"
+        font-size="11" letter-spacing="1.5">
+    AI SYSTEMS  /  CYBERSECURITY  /  SOFTWARE ENGINEERING
+  </text>
 
-<image
-  href="https://ashfaqhydercs.vercel.app/ashfaq-hyder-logo.png"
-  x="882" y="112"
-  width="176" height="176"
-  preserveAspectRatio="xMidYMid meet"
-  clip-path="url(#logoClip)"
-/>
+  <!-- Logo frame -->
+  <circle cx="970" cy="200" r="112"
+          fill="none" stroke="#ffffff"
+          stroke-opacity=".25" stroke-width="1"/>
 
-<!-- RIGHT LABELS -->
-<text x="830" y="375"
-      font-family="monospace" font-size="11"
-      fill="#999" letter-spacing="3">
-  PERSONAL SIGNATURE / 001
-</text>
+  <circle cx="970" cy="200" r="100"
+          fill="none" stroke="#ffffff"
+          stroke-opacity=".12" stroke-width="1"
+          stroke-dasharray="3 7"/>
 
-<!-- FOOTER -->
-<path d="M65 380H1135" stroke="#555"/>
+  <circle cx="970" cy="200" r="88"
+          fill="#ffffff" fill-opacity=".04"
+          stroke="#ffffff" stroke-opacity=".5"
+          stroke-width="1.5"/>
 
-<text x="65" y="394"
-      font-family="monospace" font-size="9"
-      fill="#777" letter-spacing="2">
-  AI SYSTEMS / CYBERSECURITY / SOFTWARE ENGINEERING
-</text>
+  <!-- Portfolio logo -->
+  <image
+    x="882" y="112"
+    width="176" height="176"
+    xlink:href="assets/ashfaq-hyder-logo.png"
+    preserveAspectRatio="xMidYMid meet"
+    clip-path="url(#logoClip)"/>
 
-<text x="1135" y="394"
-      font-family="monospace" font-size="9"
-      text-anchor="end" fill="#777">
-  ASHFAQHYDERCS.VERCEL.APP
-</text>
+  <!-- Small accents -->
+  <circle cx="970" cy="80" r="3" fill="#ffffff"/>
+  <circle cx="1090" cy="200" r="3" fill="#ffffff"/>
+  <circle cx="970" cy="320" r="3" fill="#ffffff"/>
+  <circle cx="850" cy="200" r="3" fill="#ffffff"/>
+
+  <!-- Footer -->
+  <text x="56" y="382"
+        fill="#666666"
+        font-family="monospace"
+        font-size="9" letter-spacing="1.5">
+    BENGALURU, INDIA
+  </text>
+
+  <text x="1145" y="382" text-anchor="end"
+        fill="#888888"
+        font-family="monospace"
+        font-size="9" letter-spacing="1.5">
+    ASHFAQHYDERCS.VERCEL.APP
+  </text>
 
 </svg>
